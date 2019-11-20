@@ -8,7 +8,7 @@ const navigationItems = () => (
     <NavigationItem link='/' exact>
       Store
     </NavigationItem>
-    <NavigationItem link='/my-basket'>My Basket</NavigationItem>
+    <NavigationItem link='/basket'>My Basket</NavigationItem>
   </ul>
 );
 
