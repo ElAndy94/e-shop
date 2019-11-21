@@ -1,6 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# E Shop.
 
-## Available Scripts
+## Buy, compare and enjoy our new online store!
+
+This application is a little web app where you can search through all our mobile devices, look at their specifications, compare them and buy order them!
+
+Technologies used:
+
+### React, Typescript, Redux, MongoDB.
 
 In the project directory, you can run:
 
