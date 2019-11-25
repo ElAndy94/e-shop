@@ -1,3 +1,15 @@
 .productItem {
   padding: 24px 16px;
+
+  img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .productItem__info {
+    div {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
 }
