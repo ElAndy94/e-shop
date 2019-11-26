@@ -1,12 +1,15 @@
 .productItem {
   padding: 24px 16px;
-
+  // box-shadow: 5px 10px 18px #000;
   img {
     height: 300px;
     width: 300px;
   }
 
   .productItem__info {
+    h1 {
+      text-align: center;
+    }
     div {
       display: flex;
       justify-content: space-around;
