@@ -3,16 +3,21 @@
   // box-shadow: 5px 10px 18px #000;
   img {
     height: 300px;
-    width: 300px;
+    width: 161px;
   }
 
   .productItem__info {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
     h1 {
       text-align: center;
     }
-    div {
-      display: flex;
-      justify-content: space-around;
-    }
+
+    // div {
+    //   display: flex;
+    //   justify-content: space-around;
+    // }
   }
 }

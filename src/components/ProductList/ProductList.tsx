@@ -28,6 +28,10 @@ const theProducts = [
 ];
 
 const ProductList: React.FC = () => {
+  const clicked = (id: string) => {
+    console.log(id);
+  };
+
   const products = theProducts.map(product => {
     return (
       <Product
@@ -36,6 +40,9 @@ const ProductList: React.FC = () => {
         price={product.price}
         category={product.category}
         specs={product.specs}
+        clicked={() => {
+          clicked(product._id);
+        }}
       />
     );
   });
