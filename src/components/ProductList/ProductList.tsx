@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Product from './Product/Product';
+import FullProduct from './FullProduct/FullProduct';
 import './ProductList.scss';
 
 const theProducts = [
@@ -28,8 +29,10 @@ const theProducts = [
 ];
 
 const ProductList: React.FC = () => {
+  const [itemClicked, setItemClicked] = useState();
+
   const clicked = (id: string) => {
-    console.log(id);
+    setItemClicked(id);
   };
 
   const products = theProducts.map(product => {
@@ -38,8 +41,8 @@ const ProductList: React.FC = () => {
         key={product._id}
         name={product.name}
         price={product.price}
-        category={product.category}
-        specs={product.specs}
+        // category={product.category}
+        // specs={product.specs}
         clicked={() => {
           clicked(product._id);
         }}
@@ -47,9 +50,27 @@ const ProductList: React.FC = () => {
     );
   });
 
+  const selectedProduct = theProducts
+    .filter(product => product._id === itemClicked)
+    .map(product => {
+      return (
+        <FullProduct
+          key={product._id}
+          name={product.name}
+          price={product.price}
+          category={product.category}
+          specs={product.specs}
+        />
+      );
+    });
+
   return (
     <>
-      <ul className='products_container'>{products}</ul>
+      {!itemClicked ? (
+        <ul className='products_container'>{products}</ul>
+      ) : (
+        <>{selectedProduct}</>
+      )}
     </>
   );
 };
